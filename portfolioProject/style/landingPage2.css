@@ -103,4 +103,12 @@ h1 {
     .form-group .input {
         width: 250px;
     }
+
+    .h2p {
+        padding: 15px;
+    }
+
+    .h2p p {
+        padding: 25px;
+    }
 }
