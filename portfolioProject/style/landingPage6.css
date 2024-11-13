@@ -6,7 +6,7 @@
 
 body {
     width: 100vw;
-    height: auto;
+    height: 100vh;
     margin: auto;
     font-family: "Heebo", sans-serif;
     overflow-x: hidden;
@@ -14,24 +14,20 @@ body {
 
 .landing-page {
     width: 100vw;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
 }
 
-.landing-page .details {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 100px);
+.details {
+    display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: auto;
-    row-gap: 200px;
+    height: 110vh;
+    gap: 10vw;
 }
 
-.details img {
+.landing-page img {
     width: 30px;
     height: 30px;
 }
@@ -49,20 +45,31 @@ body {
     cursor: pointer;
 }
 
+.whatsAppIcon {
+    width: 40vw;
+    display: flex;
+    justify-content: left;
+}
+
 .form {
     display: flex;
     flex-direction: column;
     justify-content: right;
     align-items: center;
     direction: rtl;
-    margin-bottom: 200px;
-    margin-top: 200px;
+}
+
+.formH1p {
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
 }
 
 .h1p {
     display: flex;
     flex-direction: column;
     width: 32.5vw;
+    align-items: start;
 }
 
 .h1p h1 {
@@ -79,9 +86,7 @@ body {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: right;
     align-items: center;
-    width: 40vw;
 }
 
 .form input,
@@ -95,6 +100,7 @@ textarea {
 
 .form-group {
     display: flex;
+    width: 35vw;
 }
 
 .form-group label {
@@ -116,6 +122,7 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-items: right;
+    width: 35vw;
 }
 
 textarea {
@@ -137,12 +144,8 @@ textarea {
 
 
 .iphone {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 4;
-    width: 100%;
-    height: 100%;
+    width: 50vw;
+    height: 110vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -161,7 +164,7 @@ textarea {
 }
 
 .iphone img {
-    width: 65%;
+    width: 25vw;
     height: auto;
 }
 
@@ -173,26 +176,33 @@ textarea {
     position: relative;
     margin-top: 100px;
     align-self: flex-end;
+    position: relative;
+}
+
+.iconsLine {
+    position: absolute;
+    width: 45vw;
+    height: auto;
     border-bottom: 10px solid #FDBD03;
+    bottom: 0;
+    left: 0;
+
 }
 
 .media-icons img {
     width: 280px;
     height: 50px;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 1200px) {
-    .landing-page .details {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(4, 100px);
+
+    .details {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-
-    .details img {
-        width: 80px;
-        height: 120px;
+        width: 100vw;
     }
 
     .image {
@@ -200,10 +210,107 @@ textarea {
     }
 
     .iphone {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 35%;
+    }
+
+    .line {
+        width: 75vw;
+    }
+
+
+    .form h1 {
+        text-align: center;
+        font-size: 2.5em;
+        width: 100vw;
+    }
+
+    .form p {
+        width: 100vw;
+        text-align: center;
+    }
+
+
+    .h1p {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .email {
+        margin-left: 10px;
+    }
+
+    .textarea {
+        width: auto;
+
+    }
+
+    .textarea label {
+        direction: rtl;
+        text-align: right;
+    }
+
+    textarea {
+        width: 260px;
+        margin-left: 15px;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .form-group input {
+        width: 260px;
+    }
+
+    .textarea input {
+        width: 260px;
+    }
+
+    .iconsLine {
+        width: 100vw;
+    }
+
+    .media-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /*  
+                .formH1p {
+                    height: auto;
+                    width: 50vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+
+
+
+    .iphone {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -219,29 +326,22 @@ textarea {
         height: auto;
     }
 
-    .line {
-        width: 75vw;
-    }
 
-    .form {
-        grid-row-start: 2;
-        grid-row-end: 4;
+
+ 
+
+
+    .formH1p {
+        height: auto;
+        width: 50vw;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
-    .h1p {
-        width: 68vw;
-    }
 
-    .form h1 {
-        text-align: center;
-        font-size: 40px;
-    }
 
-    .form p {
-        text-align: center;
-    }
 
     textarea {
         width: 260px;
@@ -249,18 +349,10 @@ textarea {
 
     }
 
-    .textarea input {
-        width: 260px;
-    }
+ 
 
-    .form-group {
-        display: flex;
-        flex-direction: column;
-    }
+ 
 
-    .form-group input {
-        width: 260px;
-    }
 
     .media-icons {
         grid-row-start: 4;
@@ -272,5 +364,5 @@ textarea {
     .media-icons img {
         width: 300px;
         height: 50px;
-    }
+    } */
 }
