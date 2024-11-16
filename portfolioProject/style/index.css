@@ -345,6 +345,96 @@
            color: white;
        }
 
+       /* ------------------- script------------------------------ */
+       .script {
+           width: 100vw;
+           height: 90vh;
+           background-color: rgb(236, 236, 236);
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+       }
+
+       .script h1 {
+           text-align: center;
+           padding-top: 20px;
+       }
+
+
+       .gameCenter {
+           display: grid;
+           width: 80vw;
+           height: 90vh;
+           grid-template-columns: repeat(3, 1fr);
+           grid-template-rows: repeat(2, 1fr);
+           align-items: center;
+           justify-content: center;
+           gap: 10px;
+       }
+
+       .game {
+           width: 280px;
+           height: 150px;
+           background-color: white;
+           border-radius: 15px;
+           box-shadow: 4px 4px 8px rgb(95, 95, 95);
+           overflow: hidden;
+           position: relative;
+       }
+
+       .game img {
+           width: 280px;
+           height: 170px;
+           transition: transform 0.3s ease-in-out;
+       }
+
+       .content {
+           position: absolute;
+           bottom: -50px;
+           width: 280px;
+           height: 50px;
+           background-color: rgba(0, 0, 0, 0.384);
+           display: flex;
+           flex-direction: row-reverse;
+           align-items: center;
+           justify-content: center;
+           gap: 20px;
+           opacity: 0;
+           transition: all 0.5s ease-in-out, opacity 0.5s ease-in-out;
+       }
+
+       .content a {
+           text-decoration: none;
+           color: black;
+       }
+
+       .content button {
+           padding: 5px;
+           border: none;
+           box-shadow: 1px 1px 3px rgb(93, 93, 93);
+           border-radius: 10px;
+           font-size: 0.9em;
+           font-weight: 600;
+       }
+
+       .content p {
+           color: white;
+           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           font-size: 1.1em;
+       }
+
+       .game:hover .content {
+           bottom: 0;
+           opacity: 1;
+           visibility: visible;
+       }
+
+       .game:hover img {
+           transform: scale(1.1);
+       }
+
+
        /*------------------------------------------Contact----------------------------------*/
        #contact {
            background-color: rgb(247, 247, 247);
