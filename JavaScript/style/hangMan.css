@@ -229,6 +229,7 @@ body {
 .correct {
     color: rgb(2, 214, 2);
     font-size: 1.4em;
+    text-align: center;
 }
 
 /* ---------------------  created in the JavaScript page ---------------------------*/
