@@ -626,7 +626,7 @@
            padding-right: 20px;
        }
 
-       @media (max-width:800px) {
+       @media (max-width:1200px) {
            body {
                width: 100%;
            }
@@ -675,6 +675,16 @@
                grid-template-columns: repeat(1, 1fr);
                grid-template-rows: repeat(6, 400px);
                margin-top: 50px;
+           }
+
+           .gameCenter {
+               display: flex;
+               flex-direction: column;
+               height: 80vh;
+           }
+
+           .script h1 {
+               padding: 10px;
            }
 
            .form {
