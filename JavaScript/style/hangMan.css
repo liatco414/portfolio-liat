@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 255, 191);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.GAME {
+    width: 90vw;
+    height: 95vh;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgb(133, 133, 133);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.box {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.title h1 {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.vocabulary h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.vocabulary p {
+    border: 2px solid #000;
+    padding: 5px;
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: 600;
+}
+
+.vocabulary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+}
+
+
+.keyboard {
+    width: 48vw;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.keyboard button {
+    font-size: 1.3em;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 135);
+    border: 2px groove #000;
+    box-shadow: 2px 2px 5px rgb(93, 93, 93);
+    transition: all 0.1s ease-in-out;
+}
+
+.keyboard button:hover {
+    transform: scale(0.95);
+}
+
+.word {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.btnST {
+    display: flex;
+    gap: 15px;
+}
+
+.next,
+.start {
+    padding: 5px;
+    font-size: 1.1em;
+}
+
+.space {
+    list-style-type: none;
+    display: flex;
+    width: 20px;
+}
+
+
+.subject {
+    margin-left: 40px;
+    width: 25vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.score {
+    font-size: 1.5em;
+    color: crimson;
+}
+
+.hangMan {
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hangMan img {
+    width: 250px;
+    height: 280px;
+    position: absolute;
+    display: none;
+}
+
+
+.popup {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    position: fixed;
+    background-color: #00000023;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.popupWrap {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(255, 255, 213);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 3px rgb(79, 79, 79);
+    border-radius: 15px;
+}
+
+.popupContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.popupContent h1 {
+    font-size: 2em;
+    color: red;
+    text-shadow: 1px 1px 4px rgb(68, 68, 68);
+}
+
+.popupContent p {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.newGame,
+.back {
+    cursor: pointer;
+    padding: 5px;
+    font-weight: 600;
+    background-color: bisque;
+    border: 1px solid #000;
+    border-radius: 7px;
+}
+
+.back a {
+    text-decoration: none;
+    color: black;
+}
+
+.next,
+.start {
+    cursor: pointer;
+    background-color: rgba(255, 240, 70, 0.735);
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px rgb(133, 133, 133);
+    border: 1px groove #000;
+}
+
+.correct {
+    color: rgb(2, 214, 2);
+    font-size: 1.4em;
+}
+
+/* ---------------------  created in the JavaScript page ---------------------------*/
+.wellDone {
+    color: rgb(2, 214, 2);
+    font-size: 1.4em;
+}
+
+.divLi {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.letters {
+    list-style-type: none;
+    height: 50px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid black;
+    font-size: 2.2em;
+    word-wrap: break-word;
+}
+
+@media (max-width: 1200px) {
+    body {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .GAME {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        padding-bottom: 20px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .vocabulary {
+        width: 90%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .keyboard {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .title h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    .subject {
+        width: 90%;
+        margin-left: 0;
+        gap: 30px;
+    }
+}
