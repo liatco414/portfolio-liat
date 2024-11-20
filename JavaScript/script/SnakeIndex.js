@@ -52,6 +52,8 @@ randomPositionSnake();
 
 document.addEventListener('keydown', snakeMovement)
 function snakeMovement(event) {
+    event.preventDefault();
+
     switch (event.key) {
         case 'ArrowUp':
             direction = 'up';
