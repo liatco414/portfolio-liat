@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Arcade ibiz';
-    src: url(ArcadeNormal-ZDZ.ttf);
+    src: url(../projects/scriptProject_two/ArcadeNormal-ZDZ.ttf);
 }
 
 * {
@@ -177,7 +177,7 @@ body {
 
     .snakeGame {
         width: 90vw;
-        height: 90vh;
+        height: 75vh;
     }
 
     .scores {
@@ -195,6 +195,7 @@ body {
 
     .boardGame {
         width: 90vw;
+        height: 70vh;
         display: flex;
         flex-direction: column;
         position: relative;
