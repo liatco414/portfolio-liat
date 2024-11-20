@@ -206,6 +206,7 @@ body {
 
     .boardGame h1 {
         display: none;
+        visibility: hidden;
     }
 
     .arrow {
