@@ -10,7 +10,7 @@ const up = document.querySelector('.up');
 const down = document.querySelector('.down');
 const left = document.querySelector('.left');
 const right = document.querySelector('.right')
-const arrows = document.querySelector('.arrows')
+const arrow = document.querySelector('.arrow')
 
 let snakePositionX = 0;
 let snakePositionY = 0;
@@ -33,8 +33,8 @@ function randomFruit() {
     const containerWidth = boardGame.offsetWidth;
     const containerHeight = boardGame.offsetHeight;
 
-    fruitRandomX = Math.floor(Math.random() * (containerWidth - fruit.offsetWidth));
-    fruitRandomY = Math.floor(Math.random() * (containerHeight - fruit.offsetHeight));
+    fruitRandomX = Math.floor(Math.random() * (containerWidth - fruit.offsetWidth - arrow.offsetWidth));
+    fruitRandomY = Math.floor(Math.random() * (containerHeight - fruit.offsetHeight - arrow.offsetHeight));
 
     fruit.style.top = fruitRandomY + 'px';
     fruit.style.left = fruitRandomX + 'px';
@@ -46,8 +46,8 @@ function randomPositionSnake() {
     const boardWidthX = boardGame.offsetWidth;
     const boardHeightY = boardGame.offsetHeight;
 
-    snakePositionX = Math.floor(Math.random() * (boardWidthX - snake.offsetWidth));
-    snakePositionY = Math.floor(Math.random() * (boardHeightY - snake.offsetHeight));
+    snakePositionX = Math.floor(Math.random() * (boardWidthX - snake.offsetWidth - arrow.offsetWidth));
+    snakePositionY = Math.floor(Math.random() * (boardHeightY - snake.offsetHeight - arrow.offsetHeight));
 
     snake.style.top = snakePositionY + 'px';
     snake.style.left = snakePositionX + 'px';
@@ -135,6 +135,11 @@ function startGame() {
                 theScore = score;
             }
             highestScore.innerHTML = `Highest Score: ${theScore} `;
+
+            for (let i = 0; i < 3; i++) {
+                bodyParts.push({ x: bodyParts[bodyParts.length - 1].x, y: bodyParts[bodyParts.length - 1].y });
+            }
+
 
         } else {
             bodyParts.pop();
