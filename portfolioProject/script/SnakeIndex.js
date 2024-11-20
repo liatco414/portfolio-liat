@@ -24,7 +24,7 @@ let theScore = 0;
 
 let isUsingScreenArrows = false;
 let keyboardSpeed = 10;
-let screenArrowSpeed = 40;
+let screenArrowSpeed = 20;
 let currentSpeed = keyboardSpeed // default
 
 
