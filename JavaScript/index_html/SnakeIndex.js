@@ -3,14 +3,24 @@ const fruit = document.querySelector('.fruit');
 const boardGame = document.querySelector('.boardGame');
 const snakeBody = document.querySelector('.snakeBody')
 const popup = document.querySelector('.popup');
+let gameScore = document.querySelector('.score');
+let highestScore = document.querySelector('.highestScore');
+const newGame = document.querySelector('.newGame');
+const up = document.querySelector('.up');
+const down = document.querySelector('.down');
+const left = document.querySelector('.left');
+const right = document.querySelector('.right')
+const arrows = document.querySelector('.arrows')
 
-let snakePositionX = 200;
-let snakePositionY = 200;
+let snakePositionX = 0;
+let snakePositionY = 0;
 let fruitRandomY = 0;
 let fruitRandomX = 0;
 let direction = '';
 let snakeSize = 1;
 let bodyParts = [{ x: snakePositionX, y: snakePositionY }];
+let score = 0;
+let theScore = 0;
 
 
 function randomFruit() {
@@ -27,7 +37,21 @@ function randomFruit() {
 }
 randomFruit();
 
-document.addEventListener('keydown', (event) => {
+function randomPositionSnake() {
+    const boardWidthX = boardGame.offsetWidth;
+    const boardHeightY = boardGame.offsetHeight;
+
+    snakePositionX = Math.floor(Math.random() * (boardWidthX - snake.offsetWidth));
+    snakePositionY = Math.floor(Math.random() * (boardHeightY - snake.offsetHeight));
+
+    snake.style.top = snakePositionY + 'px';
+    snake.style.left = snakePositionX + 'px';
+
+}
+randomPositionSnake();
+
+document.addEventListener('keydown', snakeMovement)
+function snakeMovement(event) {
     switch (event.key) {
         case 'ArrowUp':
             direction = 'up';
@@ -42,65 +66,104 @@ document.addEventListener('keydown', (event) => {
             direction = 'right';
             break;
     }
-    return
-});
+
+};
+
 function updateSnakeBody() {
     const currentBodyParts = document.querySelectorAll('.snakeBody');
     currentBodyParts.forEach(part => part.remove());
 
     for (let i = 0; i < bodyParts.length; i++) {
-        const part = bodyParts[i];
         if (i === 0) {
-            snake.style.top = part.y + 'px';
-            snake.style.left = part.x + 'px';
+            snake.style.top = bodyParts[i].y + 'px';
+            snake.style.left = bodyParts[i].x + 'px';
         } else {
             const bodyPart = document.createElement('div');
             bodyPart.classList.add('snakeBody');
-            bodyPart.style.top = part.y + 'px';
-            bodyPart.style.left = part.x + 'px';
+            bodyPart.style.top = bodyParts[i].y + 'px';
+            bodyPart.style.left = bodyParts[i].x + 'px';
             boardGame.appendChild(bodyPart);
         }
     }
 }
 
-const getGame = setInterval(() => {
-    let newHead = { x: snakePositionX, y: snakePositionY };
+let getGame;
+function startGame() {
+    if (getGame) clearInterval(getGame);
 
-    switch (direction) {
-        case 'up':
-            snakePositionY -= 2;
-            break;
-        case 'down':
-            snakePositionY += 2;
-            break;
-        case 'left':
-            snakePositionX -= 2;
-            break;
-        case 'right':
-            snakePositionX += 2;
-            break;
-    }
+    getGame = setInterval(() => {
 
-    snake.style.top = snakePositionY + 'px';
-    snake.style.left = snakePositionX + 'px';
+        let newHead = { x: snakePositionX, y: snakePositionY };
 
-    bodyParts.unshift(newHead);
+        switch (direction) {
+            case 'up':
+                snakePositionY -= 2;
+                break;
+            case 'down':
+                snakePositionY += 2;
+                break;
+            case 'left':
+                snakePositionX -= 2;
+                break;
+            case 'right':
+                snakePositionX += 2;
+                break;
+        }
 
-    //חישוב מרחק הנחש מהפרי עד שהנחש "אוכל" אותו כי מיקום מדוייק של שתיהם ייצור קושי בתפיסת הפרי
-    if (Math.abs(snakePositionX - fruitRandomX) < 8 && Math.abs(snakePositionY - fruitRandomY) < 8) {
-        randomFruit();
-    } else {
-        bodyParts.pop();
-    }
+        bodyParts.unshift(newHead);
 
+        //חישוב מרחק הנחש מהפרי עד שהנחש "אוכל" אותו כי מיקום מדוייק של שתיהם ייצור קושי בתפיסת הפרי
+        if (Math.abs(snakePositionX - fruitRandomX) < 8 && Math.abs(snakePositionY - fruitRandomY) < 8) {
+            randomFruit();
+            score++;
+            gameScore.innerHTML = `Your Score: ${score}`;
+            if (score > theScore) {
+                theScore = score;
+            }
+            highestScore.innerHTML = `Highest Score: ${theScore} `;
+
+        } else {
+            bodyParts.pop();
+        }
+
+        updateSnakeBody();
+
+        if (snakePositionX < 0 ||
+            snakePositionX >= boardGame.offsetWidth ||
+            snakePositionY < 0 ||
+            snakePositionY >= boardGame.offsetHeight) {
+            popup.style.display = 'flex';
+            clearInterval(getGame);
+        }
+
+    }, 5);
+}
+startGame();
+
+
+newGame.addEventListener('click', () => {
+    score = 0;
+    gameScore.innerHTML = `Your Score: ${score}`;
+    bodyParts = [{ x: snakePositionX, y: snakePositionY }];
+    direction = '';
+    popup.style.display = 'none';
+    randomPositionSnake();
+    randomFruit();
     updateSnakeBody();
+    startGame();
+})
 
-    if (snakePositionX < 0 ||
-        snakePositionX >= boardGame.offsetWidth ||
-        snakePositionY < 0 ||
-        snakePositionY >= boardGame.offsetHeight) {
-        popup.style.display = 'flex';
-        clearInterval(getGame);
-    }
+/* ---------------------------- phone Arrow------------------------ */
+up.addEventListener('click', () => {
+    direction = 'up';
+})
+down.addEventListener('click', () => {
+    direction = 'down';
+})
+left.addEventListener('click', () => {
+    direction = 'left';
+})
+right.addEventListener('click', () => {
+    direction = 'right';
+})
 
-}, 10);
