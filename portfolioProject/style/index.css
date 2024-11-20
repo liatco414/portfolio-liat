@@ -449,7 +449,6 @@
        .theForm {
            background-color: #363636;
            width: 95%;
-
        }
 
        .h1pForm {
@@ -685,6 +684,10 @@
 
            .script h1 {
                padding: 10px;
+           }
+
+           .theForm {
+               border-radius: 25px;
            }
 
            .form {
