@@ -199,12 +199,14 @@ body {
         display: flex;
         flex-direction: column;
         position: relative;
+
     }
 
     .boardGame h1 {
         transform: rotate(90deg);
         transform-origin: top bottom;
         font-size: 7em;
+        display: flex;
     }
 
     .arrow {
