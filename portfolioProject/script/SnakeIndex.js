@@ -22,7 +22,11 @@ let bodyParts = [{ x: snakePositionX, y: snakePositionY }];
 let score = 0;
 let theScore = 0;
 
-let isMobile = window.innerWidth <= 1200;
+let isUsingScreenArrows = false;
+let keyboardSpeed = 10;
+let screenArrowSpeed = 100;
+let currentSpeed = keyboardSpeed // default
+
 
 function randomFruit() {
 
@@ -69,6 +73,8 @@ function snakeMovement(event) {
             direction = 'right';
             break;
     }
+    isUsingScreenArrows = false;
+    restartGameWithNewSpeed();
 
 };
 
@@ -89,11 +95,15 @@ function updateSnakeBody() {
         }
     }
 }
-
 let getGame;
-let speed = isMobile ? 100 : 5;
 function startGame() {
     if (getGame) clearInterval(getGame);
+
+    if (isUsingScreenArrows) {
+        currentSpeed = screenArrowSpeed;
+    } else {
+        currentSpeed = keyboardSpeed;
+    };
 
     getGame = setInterval(() => {
 
@@ -140,7 +150,7 @@ function startGame() {
             clearInterval(getGame);
         }
 
-    }, speed);
+    }, currentSpeed);
 }
 startGame();
 
@@ -160,14 +170,27 @@ newGame.addEventListener('click', () => {
 /* ---------------------------- phone Arrow------------------------ */
 up.addEventListener('click', () => {
     direction = 'up';
+    isUsingScreenArrows = true;
+    restartGameWithNewSpeed();
 })
 down.addEventListener('click', () => {
     direction = 'down';
+    isUsingScreenArrows = true;
+    restartGameWithNewSpeed();
 })
 left.addEventListener('click', () => {
     direction = 'left';
+    isUsingScreenArrows = true;
+    restartGameWithNewSpeed();
 })
 right.addEventListener('click', () => {
     direction = 'right';
+    isUsingScreenArrows = true;
+    restartGameWithNewSpeed();
 })
+
+function restartGameWithNewSpeed() {
+    clearInterval(getGame);
+    startGame();
+}
 
