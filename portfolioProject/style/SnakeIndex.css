@@ -205,8 +205,12 @@ body {
     .boardGame h1 {
         transform: rotate(90deg);
         transform-origin: top bottom;
-        font-size: 7em;
+        font-size: 6em;
+        width: 100%;
+        height: 100%;
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .arrow {
