@@ -22,6 +22,7 @@ let bodyParts = [{ x: snakePositionX, y: snakePositionY }];
 let score = 0;
 let theScore = 0;
 
+let isMobile = window.innerWidth <= 1200;
 
 function randomFruit() {
 
@@ -90,6 +91,7 @@ function updateSnakeBody() {
 }
 
 let getGame;
+let speed = isMobile ? 100 : 5;
 function startGame() {
     if (getGame) clearInterval(getGame);
 
@@ -138,7 +140,7 @@ function startGame() {
             clearInterval(getGame);
         }
 
-    }, 5);
+    }, speed);
 }
 startGame();
 
