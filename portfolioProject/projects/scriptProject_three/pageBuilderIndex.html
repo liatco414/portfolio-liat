@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>good luck</title>
+    <link rel="stylesheet" href="../../style/pageBuilder.css">
+    <script src="../../script/pageBuilder.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+</head>
+
+<body>
+    <div class="pageBuilder">
+        <div class="papers">
+            <div class="paper"></div>
+        </div>
+        <div class="displayNav">
+            <div class="nav">
+                <h1>בונה מסך</h1>
+
+                <div class="bgcForm">
+                    <form>
+                        <label>צבע רקע</label>
+                        <input type="color" id="userColor" value="#ffffff">
+                        <label> רוחב ב-px </label>
+                        <input type="text" id="userWidth" placeholder="הגדר את רוחב האלמנט">
+                        <label>גובה ב-px</label>
+                        <input type="text" id="userHeight" placeholder="הגדר את גובה האלמנט">
+                        <label>תוכן</label>
+                        <textarea id="userContent" placeholder="כתוב את התוכן כאן"></textarea>
+                        <label>צבע הגופן</label>
+                        <input type="color" id="userTextColor">
+                        <label>גודל הגופן ב-px</label>
+                        <input type="text" id="userFz" placeholder="הגדר את גודל הטקסט">
+                        <label>בחר סוג גופן:</label>
+                        <select class="fontSelect">
+                            <option value="Arial">Arial</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                            <option value="Courier New">Courier New</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+                            <option value="Gill Sans MT">Gill Sans</option>
+                            <option value="none">אחר</option>
+                        </select>
+                        <input type="text" id="userFont" placeholder="בחר גופן אחר">
+
+                        <div class="btns">
+                            <input type="button" value="הוסף" id="bgcBtn">
+                            <input type="button" value="שמור" id="saveBtn">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
