@@ -70,6 +70,22 @@ body {
     color: white;
 }
 
+.title {
+    display: flex;
+    gap: 85px;
+}
+
+.title img {
+    width: 45px;
+    height: 35px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.title img:hover {
+    transform: scale(1.1);
+}
+
 .bgcForm form {
     display: flex;
     flex-direction: column;

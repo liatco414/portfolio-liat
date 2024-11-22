@@ -11,6 +11,7 @@ const userFont = document.querySelector('#userFont');
 const form = document.querySelector('.bgcForm form');
 const papers = document.querySelector('.papers')
 const saveBtn = document.querySelector('#saveBtn')
+const trash = document.querySelector('.trash');
 
 let newPage = false;
 let currentPage = document.querySelector('.paper');
@@ -90,7 +91,9 @@ function screenShot() {
 }
 
 
-
+trash.addEventListener('click', () => {
+    paper.innerHTML = '';
+})
 
 
 
