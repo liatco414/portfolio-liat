@@ -56,7 +56,12 @@ function navBar() {
         currentPage = newPaper;
     }
 
+    setTimeout(() => {
+        bgcDiv.classList.add('active');
+    }, 10);
+
     form.reset();
+
 };
 
 fontSelect.addEventListener('change', () => {
@@ -70,16 +75,21 @@ fontSelect.addEventListener('change', () => {
 });
 
 saveBtn.addEventListener('click', screenShot);
+
 function screenShot() {
     const e = document.querySelector('.papers');
+
     html2canvas(e).then(img => {
         const link = document.createElement('a');
         link.href = img.toDataURL('image/png');
         link.download = 'screenshot.png';
-        link.click()
-        alert('המסך נשמר בהצלחה!')
-    })
+        link.click();
+        alert('המסך נשמר בהצלחה!');
+
+    });
 }
+
+
 
 
 

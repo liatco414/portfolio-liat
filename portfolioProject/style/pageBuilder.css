@@ -14,7 +14,6 @@ body {
     width: 100vw;
     height: auto;
     display: flex;
-    position: relative;
 }
 
 
@@ -26,7 +25,6 @@ body {
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
-    position: relative;
     margin-top: 70px;
 }
 
@@ -41,7 +39,6 @@ body {
     border-radius: 10px;
     flex-wrap: wrap;
     gap: 20px;
-    overflow: hidden;
 }
 
 .displayNav {
@@ -162,20 +159,15 @@ body {
     justify-content: center;
     box-shadow: 2px 2px 5px rgb(171, 171, 171);
     text-align: center;
-    animation: appear 0.3s ease-in-out;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
 }
 
-@keyframes appear {
-    from {
-        opacity: 0;
-        transform: scale(0);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+.bgcDiv.active {
+    transform: scale(1);
 }
+
+
 
 @media (max-width:1000px) {
 
