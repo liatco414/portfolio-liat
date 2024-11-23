@@ -13,8 +13,10 @@ const papers = document.querySelector('.papers')
 const saveBtn = document.querySelector('#saveBtn')
 const trash = document.querySelector('.trash');
 
+const newPaper = document.createElement('div');
 let newPage = false;
 let currentPage = document.querySelector('.paper');
+let isTrash = false;
 
 let bgcDiv;
 bgcBtn.addEventListener('click', navBar)
@@ -51,7 +53,6 @@ function navBar() {
     const bgcDivRect = bgcDiv.getBoundingClientRect();
 
     if (bgcDivRect.bottom > paperRect.bottom * 0.90) {
-        const newPaper = document.createElement('div');
         newPaper.className = 'paper';
         papers.appendChild(newPaper);
         currentPage = newPaper;
@@ -62,6 +63,7 @@ function navBar() {
     }, 10);
 
     form.reset();
+    isTrash = false;
 
 };
 
@@ -92,7 +94,15 @@ function screenShot() {
 
 
 trash.addEventListener('click', () => {
-    paper.innerHTML = '';
+    if (!isTrash !== 0) {
+        paper.innerHTML = '';
+        papers.removeChild(newPaper);
+
+        isTrash = true;
+        currentPage = paper;
+    } else {
+        isTrash = false;
+    }
 })
 
 
