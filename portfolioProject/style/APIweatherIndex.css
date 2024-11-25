@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Concert+One&family=DynaPuff:wght@400..700&family=Jacquard+24&family=Jacquard+24+Charted&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url('backgroundImgWeather.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: "Comfortaa", sans-serif;
+    color: white;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.search {
+    width: 25vw;
+    height: fit-content;
+    border-radius: 15px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control label {
+    font-size: 1.1em;
+    font-weight: bold;
+    direction: rtl;
+}
+
+.form-control input {
+    width: 15vw;
+    height: 5vh;
+    border-radius: 6px;
+    border: 3px groove #000;
+}
+
+.form-control button {
+    width: 12vw;
+    height: 5vh;
+    margin-top: 15px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.219);
+    color: white;
+    padding: 5px;
+    box-shadow: 3px 3px 6px rgb(92, 92, 92);
+    border-radius: 8px;
+    border: 2px solid #fff;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-control button:hover {
+    transform: scale(0.95);
+    background-color: #ffffff34;
+    color: black;
+    border: 2px solid #000;
+    box-shadow: -3px -3px 6px rgb(92, 92, 92);
+
+}
+
+.search h1 {
+    color: white;
+    text-align: center;
+    margin: 15px;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 6px rgb(81, 81, 81);
+}
+
+.data {
+    width: 50vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 6px rgb(106, 106, 106);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.data img {
+    width: 200px;
+    height: 200px;
+}
+
+.data h1 {
+    color: white;
+    font-size: 3em;
+    text-transform: capitalize;
+}
+
+.data #temp {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.weather {
+    width: 40vw;
+    height: 45vh;
+    background-color: rgba(0, 0, 0, 0.107);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 3px 1px 7px rgb(120, 120, 120);
+    gap: 30px;
+}
+
+.weather p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+}
+
+#days {
+    display: flex;
+    gap: 20px;
+}
+
+@media(max-width: 1000px) {
+
+    body {
+        height: 100%;
+        width: 100%;
+        background-image: url(weatherBackgroundResponsive.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .container {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .search h1 {
+        margin: 10px;
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    .form-control {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .form-control label {
+        margin: 5px;
+    }
+
+    .form-control input {
+        width: 50vw;
+        height: 4vh;
+    }
+
+    .form-control button {
+        width: 30vw;
+        height: 4vh;
+    }
+
+    .data {
+        width: 95%;
+        background-color: #0000001a;
+    }
+
+    .data img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .data h1 {
+        font-size: 2em;
+    }
+
+    #temp {
+        font-size: 1.2em;
+    }
+
+    .weather {
+        width: 98%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #days {
+        display: flex;
+        flex-direction: column;
+    }
+}

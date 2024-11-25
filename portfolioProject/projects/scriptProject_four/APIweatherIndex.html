@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+    <link rel="stylesheet" href="APIweatherIndex.css">
+    <script src="APIweatherIndex.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="search">
+            <h1>תחזית מזג האוויר</h1>
+            <div class="form-control">
+                <label for="inputCity"> הכנס את שם העיר:</label>
+                <input type="text" id="inputCity" placeholder="לדוגמה: תל-אביב" autofocus>
+                <button>הצג תחזית</button>
+            </div>
+        </div>
+
+        <div class="data">
+            <h1 id="city">----</h1>
+            <h2 id="errorMsg"></h2>
+            <img src="defaultIconWeather.png" alt="default Icon Weather">
+            <p id="temp"> &deg; 'טמפ</p>
+
+            <div class="weather">
+                <p id="feel">כמה מעלות זה מרגיש</p>
+                <p id="description">תיאור התחזית</p>
+                <p id="days">התחזית בהמשך היום</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
