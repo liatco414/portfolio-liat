@@ -236,12 +236,12 @@ img {
 
     .formPoke,
     #description {
-        font-family: "Sriracha", cursive;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
     #power {
         width: fit-content;
-        font-family: "Sriracha", cursive;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
     input {
