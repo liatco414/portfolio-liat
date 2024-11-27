@@ -695,6 +695,11 @@
 
            .game {
                width: 340px;
+               height: 300px;
+           }
+
+           .content {
+               width: 340px;
            }
 
            .game img {
