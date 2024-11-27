@@ -365,17 +365,18 @@
        .gameCenter {
            display: grid;
            width: 80vw;
-           height: 90vh;
+           height: fit-content;
            grid-template-columns: repeat(3, 1fr);
            grid-template-rows: repeat(2, 1fr);
            align-items: center;
            justify-content: center;
-           gap: 10px;
+           gap: 20px;
+           padding: 25px;
        }
 
        .game {
-           width: 280px;
-           height: 190px;
+           width: 21.5vw;
+           height: 30vh;
            background-color: white;
            border-radius: 15px;
            box-shadow: 4px 4px 8px rgb(95, 95, 95);
@@ -685,7 +686,7 @@
            .gameCenter {
                display: flex;
                flex-direction: column;
-               height: 90vh;
+               height: fit-content;
                gap: 20px;
            }
 
@@ -695,8 +696,10 @@
 
            .game {
                width: 340px;
-               height: 300px;
+               height: 190px;
            }
+
+
 
            .content {
                width: 340px;
