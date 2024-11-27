@@ -193,6 +193,10 @@
           box-shadow: -2px 2px 10px rgb(61, 61, 61);
       }
 
+      #phone {
+          display: none;
+      }
+
       .kupon {
           display: flex;
           justify-content: center;
@@ -283,5 +287,11 @@
               gap: 60px;
           }
 
+          #phone {
+              display: block;
+          }
 
+          #desktop {
+              display: none;
+          }
       }
