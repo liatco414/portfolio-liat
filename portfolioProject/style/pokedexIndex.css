@@ -234,7 +234,6 @@ img {
         width: 98%;
     }
 
-    .formPoke,
     #description {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
@@ -251,6 +250,11 @@ img {
     #pokeName {
         line-height: 100px;
         margin-bottom: 20px;
+    }
+
+    .formPoke h1,
+    .formPoke p {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
 }
