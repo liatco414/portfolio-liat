@@ -354,7 +354,6 @@
            flex-direction: column;
            align-items: center;
            justify-content: center;
-           padding: 50px;
        }
 
        .script h1 {
@@ -376,7 +375,7 @@
 
        .game {
            width: 280px;
-           height: 150px;
+           height: 190px;
            background-color: white;
            border-radius: 15px;
            box-shadow: 4px 4px 8px rgb(95, 95, 95);
@@ -386,7 +385,7 @@
 
        .game img {
            width: 280px;
-           height: 170px;
+           height: 190px;
            transition: transform 0.3s ease-in-out;
        }
 
@@ -677,14 +676,29 @@
                margin-top: 50px;
            }
 
+           .script {
+               padding-bottom: 30px;
+               display: flex;
+               flex-direction: column;
+           }
+
            .gameCenter {
                display: flex;
                flex-direction: column;
-               height: 80vh;
+               height: 90vh;
+               gap: 20px;
            }
 
            .script h1 {
-               padding: 10px;
+               padding-bottom: 20px;
+           }
+
+           .game {
+               width: 340px;
+           }
+
+           .game img {
+               width: 340px;
            }
 
            .theForm {
@@ -721,5 +735,16 @@
 
            .form {
                width: 100%;
+           }
+
+           .gameCenter {
+               display: grid;
+               width: 80vw;
+               height: fit-content;
+               grid-template-columns: repeat(2, 1fr);
+               grid-template-rows: repeat(3, 200px);
+               align-items: center;
+               justify-content: center;
+               gap: 10px;
            }
        }
