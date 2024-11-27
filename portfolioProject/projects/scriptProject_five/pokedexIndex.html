@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex API</title>
+    <link rel="stylesheet" href="../../style/pokedexIndex.css">
+    <script src="../../script/pokedexIndex.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="formPoke">
+            <h1>Here You'll Find The BEST Information About Your Favorite POKéMON! </h1>
+            <div class="para">
+                <p>There are 1025 POKéMONS in this site. Each number represents their ID. For example, number 25 is the
+                    ID
+                    of
+                    Pikachu! hence if you're having trouble with spelling their names, you can simply enter their ID
+                    number!
+                </p>
+            </div>
+            <form>
+                <label for="user">Enter a POKéMON Name/ID:</label>
+                <div class="inputField">
+                    <input type="text" id="user" placeholder="Type: 25 or Pikachu">
+                    <img id="icon" alt="icon">
+                </div>
+                <img id="pokeBall" src="../../Images/pokeBallButton.png" alt="Pokeball button">
+            </form>
+        </div>
+
+        <div class="pokemonData">
+            <div class="title">
+                <h1 id="pokeName">Pokemon's Name</h1>
+            </div>
+            <div class="image">
+                <img id="pokeGif" alt="Display Pokemon">
+                <div class="shadow"></div>
+            </div>
+            <p id="power">It's Power</p>
+            <p id="description">The Pokemon's description</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

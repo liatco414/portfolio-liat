@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'pokemon';
+    src: url(../projects/scriptProject_five/Pokemon\ Solid.ttf);
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Concert+One&family=DynaPuff:wght@400..700&family=Jacquard+24&family=Jacquard+24+Charted&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../Images/pokeBallBackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.formPoke {
+    width: 30vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.21);
+    padding: 25px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px rgb(69, 69, 69);
+}
+
+.formPoke h1 {
+    font-size: 1.4em;
+    text-align: center;
+    color: white;
+    font-family: "Sriracha", cursive;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+    text-align: center;
+}
+
+.para {
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.532);
+    border-radius: 15px;
+    box-shadow: 3px 3px 7px rgb(90, 90, 90);
+    padding: 10px;
+}
+
+.formPoke p {
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    font-family: "Sriracha", cursive;
+}
+
+
+.formPoke form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+label {
+    font-family: "Sriracha", cursive;
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 2px 6px black;
+}
+
+input {
+    width: 15vw;
+    height: 5vh;
+    border-radius: 5px;
+    border: 2px groove #000;
+}
+
+.inputField {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pokeBall {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    animation: rotateBall 2s linear infinite;
+    box-shadow: 2px 2px 6px rgb(72, 72, 72);
+}
+
+#pokeBall:hover {
+    transform: rotate(360deg) scale(1.5);
+    animation: rotateAnimation 1s linear infinite;
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateBall {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    30% {
+        transform: rotate(-40deg)
+    }
+
+    75% {
+        transform: rotate(40deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+
+.pokemonData {
+    width: 65vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 25px;
+    padding: 10px;
+    background-image: url(../Images/pokeBackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#pokeName {
+    text-transform: capitalize;
+    font-family: 'pokemon';
+    font-size: 4em;
+    word-spacing: 5px;
+    text-align: center;
+}
+
+#icon {
+    width: 50px;
+    height: 50px;
+}
+
+#power {
+    width: 10vw;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.477);
+    box-shadow: 3px 3px 9px rgb(59, 59, 59);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    text-align: center;
+    font-family: "Sriracha", cursive;
+    font-weight: 900;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+#description {
+    width: 36vw;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(84, 84, 84);
+    background-color: rgba(0, 0, 0, 0.473);
+    color: white;
+    font-family: "Sriracha", cursive;
+    font-weight: bold;
+}
+
+.image {
+    width: 250px;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formPoke,
+    .pokemonData,
+    #description {
+        width: 98%;
+    }
+
+    #power {
+        width: fit-content;
+    }
+
+    input {
+        width: 45vw;
+    }
+
+    #pokeName {
+        line-height: 100px;
+        margin-bottom: 20px;
+    }
+
+}
