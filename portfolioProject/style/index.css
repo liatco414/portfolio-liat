@@ -348,7 +348,7 @@
        /* ------------------- script------------------------------ */
        .script {
            width: 100vw;
-           height: 90vh;
+           height: fit-content;
            background-color: rgb(236, 236, 236);
            display: flex;
            flex-direction: column;
