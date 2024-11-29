@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=DynaPuff:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    direction: rtl;
+    background-image: url(../Images/Math-Background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row-reverse;
+    overflow-x: hidden;
+
+}
+
+.game {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 20px;
+
+}
+
+.math {
+    width: 60vw;
+    height: 60vh;
+    background-color: white;
+    box-shadow: 4px 4px 9px rgb(99, 99, 99);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.box {
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    width: 20vw;
+    height: fit-content;
+    background-color: white;
+    box-shadow: 4px 4px 9px rgb(93, 93, 93);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightNDwrong {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+.middle {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    height: fit-content;
+}
+
+#checkAnswer {
+    position: absolute;
+    top: 30px;
+    width: fit-content;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    border-radius: 5px;
+    word-spacing: 6px;
+    letter-spacing: 2px;
+    padding: 10px;
+
+}
+
+.rights,
+.wrongs {
+    font-family: tahoma;
+    font-size: 1.1em;
+    font-weight: 900;
+}
+
+.diffQ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    width: 35vw;
+    height: fit-content;
+    gap: 15px;
+}
+
+.levels {
+    display: flex;
+    gap: 10px;
+}
+
+#easy,
+#medium,
+#hard {
+    padding: 7px;
+    background-color: #ff64ad;
+    box-shadow: 3px 3px 6px rgb(65, 65, 65);
+    border-radius: 6px;
+    border: none;
+    font-size: 1.1em;
+    font-weight: 900;
+    color: rgb(60, 60, 60);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#easy:hover,
+#medium:hover,
+#hard:hover {
+    transform: scale(0.95);
+    color: white;
+    border: 2px solid #fff;
+    background-color: #ff3895;
+    box-shadow: -3px -3px 6px rgb(65, 65, 65);
+}
+
+#plus,
+#minus,
+#divide,
+#double,
+#comb {
+    padding: 7px;
+    background-color: rgb(187, 0, 255);
+    color: rgb(252, 213, 255);
+    font-size: 1.2em;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 2px 2px 4px rgb(77, 77, 77);
+    transition: all 0.3s ease-in-out;
+}
+
+#plus:hover,
+#minus:hover,
+#divide:hover,
+#double:hover,
+#comb:hover {
+    background-color: rgb(252, 213, 255);
+    color: rgb(187, 0, 255);
+    box-shadow: -2px -2px 4px rgb(77, 77, 77);
+    transform: scale(0.95);
+}
+
+#container {
+    width: 40vw;
+    height: fit-content;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    font-family: 'Noto Sans';
+}
+
+.calc {
+    width: 40vw;
+    direction: ltr;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#sum {
+    width: 85px;
+    height: 38px;
+    font-size: 15px;
+    font-family: 'Noto Sans';
+    background-color: rgb(241, 241, 241);
+    border: none;
+    text-align: center;
+}
+
+.calcc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 40vw;
+    direction: ltr;
+    text-align: center;
+
+}
+
+#num1,
+#num2,
+#op,
+#equal {
+    font-family: "DynaPuff", system-ui;
+    font-weight: 700;
+    font-size: 2em;
+
+}
+
+
+
+#check,
+#next {
+    background-color: aquamarine;
+    padding: 5px;
+    box-shadow: 2px 2px 2px rgb(81, 81, 81);
+    font-weight: 600;
+    border-radius: 2px;
+    cursor: pointer;
+    color: rgb(88, 88, 88);
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+#check:hover,
+#next:hover {
+    transform: scale(0.99);
+    box-shadow: -2px -2px 2px rgb(81, 81, 81);
+    background-color: rgb(109, 185, 159);
+    color: rgb(255, 255, 255);
+}
+
+#sum {
+    font-family: "DynaPuff", system-ui;
+    font-weight: 700;
+    font-size: 2em;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media (max-width: 1200px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .math {
+        width: 98%;
+    }
+
+    .diffQ {
+        width: 10vw;
+    }
+
+    .calc {
+        width: 65vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .middle {
+        width: 100%;
+        gap: 130px;
+    }
+
+    #sum {
+        width: 15vw;
+        height: 4.5vh;
+    }
+
+    #num1,
+    #num2,
+    #op,
+    #equal {
+        font-size: 1.5em;
+    }
+
+    .rights,
+    .wrongs {
+        font-size: 1em;
+    }
+
+    .calcc {
+        display: none;
+    }
+
+
+
+
+}

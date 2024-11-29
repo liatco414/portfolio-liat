@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oron Math Game</title>
+    <link rel="stylesheet" href="../../style/oronMathIndex.css">
+</head>
+
+
+<body>
+
+    <div class="game">
+        <div id="checkAnswer"></div>
+        <div class="math">
+            <div class="rightNDwrong">
+                <div class="rights"></div>
+                <div class="wrongs"></div>
+            </div>
+            <div class="box">
+                <div class="middle">
+                    <div class="diffQ">
+                        <button id="plus">תרגילי חיבור</button>
+                        <button id="minus">תרגילי חיסור</button>
+                        <button id="divide">תרגילי חילוק</button>
+                        <button id="double">תרגילי כפל</button>
+                    </div>
+                    <div id="container">
+                        <div class="calc">
+                            <span id="num1"></span>
+                            <span id="op"></span>
+                            <span id="num2"></span>
+                            <span id="equal"> =</span>
+                            <input type="number" id="sum">
+                        </div>
+                        <br><br>
+                        <button id="check">בדוק תשובה </button>
+                        <br><br>
+                        <button id="next">עבור לתרגיל הבא</button>
+                        <br><br>
+
+                    </div>
+                </div>
+            </div>
+            <div class="levels">
+                <button id="easy">קל</button>
+                <button id="medium">בינוני</button>
+                <button id="hard">קשה</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="calcc">
+        <h1>לוח הכפל</h1>
+        <div class="calculator">
+            <div class="multiTable">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../script/oronMath.js"></script>
+</body>
+
+</html>
