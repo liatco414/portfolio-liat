@@ -10,13 +10,14 @@
 
        body {
            overflow-x: hidden;
-           width: 100%;
+           width: 100vw;
+           max-width: 100%;
        }
 
        /*----------------------------------header---------------------------------*/
 
        .header {
-           width: 100%;
+           width: 100vw;
            height: 80px;
            background-color: rgba(255, 255, 255, 0.801);
            display: flex;
@@ -99,7 +100,7 @@
        /*----------------------------------site_theme-----------------------------*/
        #box {
            background-image: url("../Images/backgrounddddddddddd_image.jpg");
-           width: 100%;
+           width: 100vw;
            background-size: cover;
            background-repeat: no-repeat;
            background-position: center;
@@ -136,7 +137,7 @@
 
        /*--------------------------------project_technology-----------------------*/
        .photos {
-           width: 100%;
+           width: 100vw;
            display: flex;
            justify-content: center;
            gap: 10px;
@@ -172,7 +173,7 @@
        /*--------------------------------about_me---------------------------------*/
        #resume {
            background-image: url("../Images/background\ image\ for\ resume.jpg");
-           width: 100%;
+           width: 100vw;
            height: 120vh;
            background-repeat: no-repeat;
            background-size: cover;
@@ -231,7 +232,7 @@
 
        #projects {
            background-color: rgb(247, 247, 247);
-           width: 100%;
+           width: 100vw;
            height: auto;
            display: flex;
            flex-direction: column;
@@ -240,7 +241,7 @@
        }
 
        .TheProject {
-           width: 100%;
+           width: 100vw;
            display: grid;
            justify-content: center;
            align-items: center;
@@ -348,7 +349,7 @@
 
        /* ------------------- script------------------------------ */
        .script {
-           width: 100%;
+           width: 100vw;
            height: fit-content;
            background-color: rgb(236, 236, 236);
            display: flex;
@@ -440,7 +441,7 @@
        /*------------------------------------------Contact----------------------------------*/
        #contact {
            background-color: rgb(247, 247, 247);
-           width: 100%;
+           width: 100vw;
            height: auto;
            display: flex;
            justify-content: center;
@@ -523,7 +524,7 @@
 
        /* --------------------------bottom_page_contact_alternative--------------------------*/
        .icons {
-           width: 100%;
+           width: 100vw;
            height: auto;
            background-color: #B6B6B6;
            display: grid;
