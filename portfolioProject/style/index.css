@@ -596,13 +596,12 @@
            .hamburger {
                display: block;
                padding-top: 10px;
-               cursor: pointer;
            }
 
            nav ul {
                display: none;
                flex-direction: column;
-               background-color: bisque;
+               background-color: rgb(255, 196, 244);
                position: absolute;
                top: 50px;
                left: 0;
@@ -613,17 +612,15 @@
            nav ul li {
                width: 30vw;
                display: block;
-               background-color: bisque;
-               border-bottom: 1px solid black;
+               background-color: rgb(255, 196, 244);
+               border-bottom: 1px solid rgb(255, 255, 255);
                height: 7vh;
                text-align: center;
+               display: flex;
+               justify-content: center;
+               align-items: center;
            }
 
-
-
-           .hamburger:hover+ul {
-               display: block;
-           }
 
            .TheProject {
                width: 100%;
