@@ -89,7 +89,6 @@
            color: #FF00BF;
            padding-bottom: 15px;
            border-bottom: 3px solid #FF00BF;
-
        }
 
        #icon {
@@ -610,16 +609,9 @@
                top: 50px;
                left: 0;
                width: 130px;
-               margin-top: 20px;
-               opacity: 0;
-               transform: translateX(-20px);
-               transition: opacity 0.3s ease, transform 0.3s ease;
            }
 
-           nav ul.show {
-               opacity: 1;
-               transform: translateX(0);
-           }
+
 
            nav ul li {
                width: 30vw;
@@ -628,7 +620,6 @@
                border-bottom: 1px solid rgb(255, 255, 255);
                height: fit-content;
                text-align: center;
-
            }
 
 
