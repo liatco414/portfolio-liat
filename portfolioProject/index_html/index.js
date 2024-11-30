@@ -3,7 +3,7 @@ const menu = document.getElementById('menu');
 const links = document.querySelectorAll('#menu a');
 
 hamburger.addEventListener('click', () => {
-    hamburger.style.display = 'block';
+    menu.style.display = 'block';
 })
 links.forEach(link => {
     link.addEventListener('click', () => {
