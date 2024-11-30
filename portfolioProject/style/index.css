@@ -98,7 +98,7 @@
        /*----------------------------------site_theme-----------------------------*/
        #box {
            background-image: url("../Images/backgrounddddddddddd_image.jpg");
-           width: 100vw;
+           width: 100%;
            background-size: cover;
            background-repeat: no-repeat;
            background-position: center;
