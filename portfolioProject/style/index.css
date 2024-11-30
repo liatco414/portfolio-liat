@@ -74,8 +74,6 @@
 
        nav ul li {
            list-style-type: none;
-           padding: 15px;
-
        }
 
        nav ul li a {
@@ -617,12 +615,13 @@
 
 
            nav ul li {
-               width: 40%;
+               width: 100%;
                display: block;
                background-color: rgb(255, 222, 249);
                border-bottom: 1px solid rgb(255, 255, 255);
                height: fit-content;
                text-align: center;
+               padding: 30px;
            }
 
 
