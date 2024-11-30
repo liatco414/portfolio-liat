@@ -237,7 +237,7 @@
        }
 
        .TheProject {
-           width: 100vw;
+           width: 100%;
            display: grid;
            justify-content: center;
            align-items: center;
@@ -257,7 +257,7 @@
 
        .projects1 {
            width: 250px;
-           height: 350px;
+           height: fit-content;
            background-color: white;
            display: flex;
            flex-direction: column;
@@ -265,6 +265,9 @@
            box-shadow: -1px 1px 4px rgb(81, 81, 81);
            overflow: hidden;
            transition: all 0.3s ease-in-out;
+           justify-content: center;
+           align-items: center;
+           padding-bottom: 10px;
        }
 
        .projects1:hover {
@@ -275,20 +278,17 @@
        }
 
        .projects-img {
-           border-top-left-radius: 25px;
-           border-top-right-radius: 25px;
+           width: 250px;
            transition: all 0.3s ease-in-out;
        }
 
 
        .projects1:hover .projects-img {
            transform: scale(1.1);
-           object-fit: contain;
        }
 
        .coffee-img:hover {
            transform: scale(1.1);
-           object-fit: contain;
        }
 
        .projects1 h2 {
@@ -297,29 +297,28 @@
        }
 
        .projects1 p {
-           padding-top: 10px;
+           padding: 10px;
            line-height: 1.5;
            display: flex;
-           width: 140px;
            text-align: center;
-           margin-left: 54px;
            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
            direction: rtl;
-           height: 75px;
+           height: 100px;
        }
 
        .btns {
+           width: fit-content;
            padding: 10px;
            background-color: rgb(133, 133, 133);
            color: black;
            font-size: 16px;
            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-           margin-top: 25px;
-           margin-left: 35px;
-           margin-right: 35px;
            border-radius: 15px;
            border-style: none;
            transition: all 0.3s ease-in-out;
+           display: flex;
+           align-items: center;
+           justify-content: center;
        }
 
        .btns:hover {
@@ -586,9 +585,6 @@
        }
 
        @media (max-width:1200px) {
-           body {
-               width: 100%;
-           }
 
            #box {
                height: fit-content;
@@ -628,12 +624,10 @@
 
            .TheProject {
                width: 100%;
-               display: grid;
+               display: flex;
+               flex-direction: column;
                justify-content: center;
                align-items: center;
-               grid-template-columns: repeat(1, 1fr);
-               grid-template-rows: repeat(6, 400px);
-               margin-top: 50px;
            }
 
            .script {
