@@ -16,6 +16,8 @@ const wrongs = document.querySelector('.wrongs');
 const easy = document.getElementById('easy')
 const medium = document.getElementById('medium')
 const hard = document.getElementById('hard')
+const start = document.getElementById('start')
+const popup = document.querySelector('.popup')
 
 let currentLevel = 'easy'
 function updateQuestion() {
@@ -318,3 +320,12 @@ function updateTableStyle() {
 updateTableStyle();
 
 window.addEventListener('resize', updateTableStyle);
+
+start.addEventListener('click', () => {
+    popup.style.display = 'none';
+})
+
+setTimeout(() => {
+    popup.style.display = 'block';
+    popup.style.display = 'flex';
+}, 800);
