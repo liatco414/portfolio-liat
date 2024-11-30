@@ -11,6 +11,7 @@ const down = document.querySelector('.down');
 const left = document.querySelector('.left');
 const right = document.querySelector('.right')
 const arrow = document.querySelector('.arrow')
+const popupArrows = document.querySelector('.popupArrows')
 
 let snakePositionX = 0;
 let snakePositionY = 0;
@@ -199,3 +200,10 @@ function restartGameWithNewSpeed() {
     startGame();
 }
 
+setTimeout(() => {
+    popupArrows.style.display = 'block';
+    popupArrows.style.display = 'flex';
+    setTimeout(() => {
+        popupArrows.style.display = 'none';
+    }, 5000);
+}, 200);
