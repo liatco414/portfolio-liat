@@ -68,6 +68,10 @@
            gap: 30px;
        }
 
+       nav ul.show {
+           display: flex;
+       }
+
        nav ul li {
            list-style-type: none;
 
