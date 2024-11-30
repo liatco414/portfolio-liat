@@ -87,7 +87,7 @@
 
        nav ul li a:hover {
            color: #FF00BF;
-           padding-bottom: 15px;
+           padding-bottom: 20px;
            border-bottom: 3px solid #FF00BF;
        }
 
@@ -609,6 +609,11 @@
                top: 50px;
                left: 0;
                width: 130px;
+               margin-top: 20px;
+               height: fit-content;
+               display: flex;
+               align-items: center;
+               justify-content: center;
            }
 
 
