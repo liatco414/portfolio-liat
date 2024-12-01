@@ -330,6 +330,7 @@
        .btns a {
            text-decoration: none;
            color: white;
+           font-weight: 800;
        }
 
        /* ------------------- script------------------------------ */
@@ -685,7 +686,11 @@
 
            .icons {
                display: flex;
-               flex-direction: column;
+               flex-direction: column-reverse;
+           }
+
+           .icons p {
+               width: 105vw;
            }
 
        }
