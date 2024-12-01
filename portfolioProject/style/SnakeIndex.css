@@ -213,7 +213,7 @@ body {
     height: 350px;
 }
 
-#phone {
+.phone {
     display: none;
 }
 
@@ -307,11 +307,11 @@ body {
         font-size: 1em;
     }
 
-    #phone {
+    .phone {
         display: block;
     }
 
-    #desktop {
+    .desktop {
         display: none;
     }
 
