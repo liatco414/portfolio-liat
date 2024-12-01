@@ -431,12 +431,14 @@
            display: flex;
            justify-content: center;
            align-items: center;
+           padding: 15px;
        }
 
        .theForm {
            background-color: #363636;
            width: 95%;
            padding: 20px;
+           border-radius: 5px;
 
        }
 

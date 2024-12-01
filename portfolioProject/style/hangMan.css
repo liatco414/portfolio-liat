@@ -303,7 +303,7 @@ body {
     }
 
     .vocabulary {
-        width: 100%;
+        width: 95%;
         text-align: center;
         margin-top: 20px;
         position: absolute;
@@ -360,5 +360,9 @@ body {
         box-shadow: 3px 3px 3px rgb(79, 79, 79);
         border-radius: 15px;
         padding: 20px;
+    }
+
+    .wellDone {
+        font-size: 1.1em;
     }
 }

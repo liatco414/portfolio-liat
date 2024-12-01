@@ -52,7 +52,7 @@ body {
 .nav {
     width: fit-content;
     height: fit-content;
-    margin-top: 100px;
+    margin-top: 103px;
     background-image: url(../Images/navBavckgroundColor.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -72,12 +72,14 @@ body {
 
 .title {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 85px;
 }
 
 .title img {
-    width: 45px;
-    height: 35px;
+    width: 35px;
+    height: 25px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
