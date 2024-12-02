@@ -4,32 +4,39 @@
            box-sizing: border-box;
        }
 
-       body {
-           overflow-x: hidden;
+       html {
+           scroll-behavior: smooth;
        }
 
+       body {
+           overflow-x: hidden;
+           width: 100%;
+           max-width: 100%;
+       }
+
+       /*----------------------------------header---------------------------------*/
 
        .header {
-           width: 100vw;
-           height: 12vh;
+           width: 100%;
+           height: 80px;
            background-color: rgba(255, 255, 255, 0.801);
            display: flex;
            align-items: center;
+           justify-content: center;
            box-shadow: 1px 1px 2px rgb(95, 95, 95);
            position: fixed;
            z-index: 1000;
+           gap: 50%;
 
        }
 
        .logo {
-           margin-left: auto;
-           margin-right: 30px;
            display: flex;
            flex-direction: row-reverse;
+           gap: 20px;
        }
 
        .logo p {
-           margin-right: 20px;
            padding-top: 20px;
            font-family: arial;
            font-size: 1.2em;
@@ -38,11 +45,12 @@
        .logo p a {
            text-decoration: none;
            color: black;
+           transition: all 0.3s ease-in-out;
        }
 
        .logo p a:hover {
            font-size: 1.1em;
-           transition: 0.3s;
+
        }
 
        /*--------------------------------Nav_Bar--------------------------------*/
@@ -53,18 +61,19 @@
 
        nav {
            display: flex;
-           padding-left: 20px;
        }
 
        nav ul {
+           display: flex;
+           gap: 30px;
+       }
+
+       nav ul.show {
            display: flex;
        }
 
        nav ul li {
            list-style-type: none;
-           padding-left: 30px;
-
-
        }
 
        nav ul li a {
@@ -72,7 +81,6 @@
            color: rgb(73, 73, 73);
            font-size: 20px;
            font-family: arial;
-           display: none;
 
        }
 
@@ -80,7 +88,6 @@
            color: #FF00BF;
            padding-bottom: 15px;
            border-bottom: 3px solid #FF00BF;
-
        }
 
        #icon {
@@ -93,7 +100,7 @@
        /*----------------------------------site_theme-----------------------------*/
        #box {
            background-image: url("../Images/backgrounddddddddddd_image.jpg");
-           width: 100vw;
+           width: 100%;
            background-size: cover;
            background-repeat: no-repeat;
            background-position: center;
@@ -101,6 +108,7 @@
            display: flex;
            flex-direction: column;
            align-items: center;
+           padding-bottom: 20px;
        }
 
        #box h1 {
@@ -116,12 +124,11 @@
            font-family: arial;
            text-align: center;
            color: black;
-           padding-left: 25%;
-           padding-right: 25%;
            direction: rtl;
            margin-top: 10px;
            margin-bottom: 5px;
            line-height: 1.3;
+           width: 80%;
        }
 
        .btns-project {
