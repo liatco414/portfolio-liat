@@ -261,6 +261,146 @@ body {
     word-wrap: break-word;
 }
 
+.popupExplain {
+    position: fixed;
+    background-color: #00000079;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.popupWrapExplain {
+    background-color: white;
+    width: 50%;
+    height: fit-content;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(255, 255, 191);
+}
+
+.popupContentExplain {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    direction: rtl;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.popupContentExplain h1 {
+    font-size: 2em;
+    font-weight: bolder;
+    text-shadow: 2px 2px 6px rgb(66, 66, 66);
+}
+
+.popupContentExplain p {
+    font-size: 1.2em;
+    width: 95%;
+    line-height: 1.5;
+    text-shadow: 1px 1px 4px rgb(66, 66, 66);
+    font-weight: 600;
+
+}
+
+.popupContentExplain button {
+    padding: 5px;
+    background: linear-gradient(to bottom, #f6e5b4, #FDBD03);
+    color: white;
+    font-size: 1.1em;
+    font-weight: 900;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgb(92, 92, 92);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.popupContentExplain button:hover {
+    transform: scale(0.95);
+    background: linear-gradient(to bottom, #FDBD03, #f6e5b4);
+}
+
+.popupCongrats {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: fixed;
+    background-color: #00000023;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.popupWrapCongrats {
+    background-color: white;
+    width: 20%;
+    height: fit-content;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(206, 255, 191);
+}
+
+.popupContentCongrats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    direction: rtl;
+    color: rgb(2, 216, 2);
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+}
+
+.popupContentCongrats h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgb(52, 52, 52);
+}
+
+.popupContentCongrats p {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgb(52, 52, 52);
+}
+
+.popupContentCongrats button {
+    border: 2px solid #2fff55;
+    background-color: rgb(156, 255, 156);
+    box-shadow: 2px 2px 5px rgb(65, 65, 65);
+    transition: all 0.3s ease-in-out;
+}
+
+.popupContentCongrats button a {
+    color: white;
+    font-weight: 900;
+}
+
+.popupContentCongrats button:hover {
+    border: 2px solid rgb(156, 255, 156);
+    background-color: #2fff55;
+    transform: scale(0.95);
+
+}
+
+
+
 @media (max-width: 1200px) {
     body {
         width: 100%;
@@ -364,5 +504,23 @@ body {
 
     .wellDone {
         font-size: 1.1em;
+    }
+
+    .popupExplain {
+        position: fixed;
+        top: 0;
+    }
+
+    .popupWrapExplain {
+        width: 96%;
+    }
+
+    .popupCongrats {
+        position: fixed;
+        top: 0;
+    }
+
+    .popupWrapCongrats {
+        width: 75%;
     }
 }

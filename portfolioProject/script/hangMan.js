@@ -8,11 +8,15 @@ const score = document.querySelector('.score');
 const start = document.querySelector('.start');
 const correct = document.querySelector('.correct');
 const wellDone = document.querySelector('.wellDone')
+const popupStart = document.querySelector('.popupContentExplain button');
+const popupExplain = document.querySelector('.popupExplain');
+const popupCongrats = document.querySelector('.popupCongrats');
 
 let correctWord = 0;
 let incorrect = 0;
 
-// פונקציה שמעדכנת טעויות
+const shows = ['ARROW', 'FRIENDS', 'THE FLASH', 'SHAMELESS', 'THE BLACKLIST', 'SEINFELD', 'SCANDAL', 'IRONMAN', 'THOR', 'TRUTH OR DARE', 'THE WALKING DEAD', 'PRISON BREAK', 'ONCE UPON A TIME', 'SPIDERMAN', 'BREAKING BAD', 'GAME OF THRONES', 'THE VAMPIRE DIARIES'];
+
 function updateIncorrect() {
     incorrect++;
     score.innerHTML = "mistakes: " + incorrect + "/8";
@@ -27,7 +31,7 @@ function updateIncorrect() {
 }
 
 function series() {
-    const shows = ['ARROW', 'FRIENDS', 'THE FLASH', 'SHAMELESS', 'THE BLACKLIST', 'SEINFELD', 'SCANDAL', 'IRONMAN', 'THOR', 'TRUTH OR DARE', 'THE WALKING DEAD', 'PRISON BREAK', 'ONCE UPON A TIME', 'SPIDERMAN', 'HOW I MET YOUR MOTHER', 'BREAKING BAD', 'GAME OF THRONES'];
+
     const tvSeries = shows[Math.floor(Math.random() * shows.length)];
 
     const splitShows = tvSeries.split('');
@@ -74,6 +78,20 @@ function checkLetter(letter, splitShows) {
         correct.textContent = 'Correct Words: ' + correctWord;
         wellDone.textContent = 'You Have Completed The Word, Well Done!'
 
+        const wordCompleted = splitShows.join('');
+        const index = shows.indexOf(wordCompleted);
+        if (index !== -1) {
+            shows.splice(index, 1);
+            if (shows.length === 0) {
+                setTimeout(() => {
+                    popupCongrats.style.display = 'block';
+                    popupCongrats.style.display = 'flex';
+                }, 200)
+            }
+
+        }
+
+
     }
 
 
@@ -82,7 +100,6 @@ function checkLetter(letter, splitShows) {
     }
 }
 
-// פונקציית איפוס
 function resetGame() {
     word.innerHTML = '';
     hangMan.forEach(img => (img.style.display = 'none'));
@@ -108,3 +125,11 @@ newGame.addEventListener('click', () => {
     series();
     correctWord = 0;
 });
+
+setTimeout(() => {
+    popupExplain.style.display = 'flex';
+}, 300);
+
+popupStart.addEventListener('click', () => {
+    popupExplain.style.display = 'none';
+})
