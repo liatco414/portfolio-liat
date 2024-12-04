@@ -266,7 +266,7 @@ body {
 
 .popupWrap {
     width: 50%;
-    height: 55%;
+    height: fit-content;
     background-color: white;
     padding: 10px;
     border-radius: 15px;

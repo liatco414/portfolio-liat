@@ -20,20 +20,27 @@ const start = document.getElementById('start')
 const popup = document.querySelector('.popup')
 
 let currentLevel = 'easy'
-function updateQuestion() {
-    if (currentLevel === 'easy') {
+function updateQuestionDndD() {
+    if (currentLevel === 'easy' && (op.innerHTML === '*' || op.innerHTML === ':')) {
         x = (Math.floor(Math.random() * 10) + 1);
         y = (Math.floor(Math.random() * 10) + 1);
-
-    } else if (currentLevel === 'medium') {
-        x = (Math.floor(Math.random() * 15) + 1);
-        y = (Math.floor(Math.random() * 15) + 1);
-
-
-    } else if (currentLevel === 'hard') {
+    } else if (currentLevel === 'easy' && (op.innerHTML === '+' || op.innerHTML === '-')) {
         x = (Math.floor(Math.random() * 20) + 1);
         y = (Math.floor(Math.random() * 20) + 1);
+    } else if (currentLevel === 'medium' && (op.innerHTML === '*' || op.innerHTML === ':')) {
+        x = (Math.floor(Math.random() * 15) + 1);
+        y = (Math.floor(Math.random() * 15) + 1);
+    } else if (currentLevel === 'medium' && (op.innerHTML === '+' || op.innerHTML === '-')){
+        x = (Math.floor(Math.random() * 50) + 1);
+        y = (Math.floor(Math.random() * 50) + 1);
+    }else if (currentLevel === 'hard' && (op.innerHTML === '*' || op.innerHTML === ':')){
+        x = (Math.floor(Math.random() * 20) + 1);
+        y = (Math.floor(Math.random() * 20) + 1);
+    }else if (currentLevel === 'hard' && (op.innerHTML === '+' || op.innerHTML === '-')){
+        x = (Math.floor(Math.random() * 100) + 1);
+        y = (Math.floor(Math.random() * 100) + 1);
     }
+
     num1.innerHTML = x;
     num2.innerHTML = y;
     checkAnswer.style.backgroundColor = '';
@@ -49,20 +56,21 @@ function levels() {
     easy.addEventListener('click', one)
     function one() {
         currentLevel = 'easy'
-        updateQuestion();
+        updateQuestionDndD();
     }
     medium.addEventListener('click', two)
     function two() {
         currentLevel = 'medium';
-        updateQuestion();
+        updateQuestionDndD();
     }
     hard.addEventListener('click', three)
     function three() {
         currentLevel = 'hard';
-        updateQuestion();
+        updateQuestionDndD();
     }
 }
 levels()
+console.log(levels);
 
 
 
@@ -113,7 +121,7 @@ plus.addEventListener('click', function operatorPlus() {
     }
     next.addEventListener('click', nextQuestion);
     function nextQuestion() {
-        updateQuestion();
+        updateQuestionDndD();
 
     }
     sum.value = '';
@@ -168,7 +176,7 @@ minus.addEventListener('click', function operatorMinus() {
     next.addEventListener('click', nextQuestion);
 
     function nextQuestion() {
-        updateQuestion();
+        updateQuestionDndD();
     }
     sum.value = '';
     checkAnswer.style.backgroundColor = '';
@@ -225,7 +233,7 @@ divide.addEventListener('click', function operatorDivide() {
     next.addEventListener('click', nextQuestion);
 
     function nextQuestion() {
-        updateQuestion();
+        updateQuestionDndD();
     }
     sum.value = '';
     checkAnswer.style.backgroundColor = '';
@@ -278,7 +286,7 @@ double.addEventListener('click', function operatorDouble() {
     next.addEventListener('click', nextQuestion);
 
     function nextQuestion() {
-        updateQuestion();
+        updateQuestionDndD();
     }
     sum.value = '';
     checkAnswer.style.backgroundColor = '';
