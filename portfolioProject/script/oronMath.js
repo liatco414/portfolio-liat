@@ -22,17 +22,17 @@ const popup = document.querySelector('.popup')
 let currentLevel = 'easy'
 function updateQuestion() {
     if (currentLevel === 'easy') {
-        x = (Math.floor(Math.random() * 20) + 1);
-        y = (Math.floor(Math.random() * 20) + 1);
+        x = (Math.floor(Math.random() * 10) + 1);
+        y = (Math.floor(Math.random() * 10) + 1);
 
     } else if (currentLevel === 'medium') {
-        x = (Math.floor(Math.random() * 50) + 1);
-        y = (Math.floor(Math.random() * 50) + 1);
+        x = (Math.floor(Math.random() * 15) + 1);
+        y = (Math.floor(Math.random() * 15) + 1);
 
 
     } else if (currentLevel === 'hard') {
-        x = (Math.floor(Math.random() * 100) + 1);
-        y = (Math.floor(Math.random() * 100) + 1);
+        x = (Math.floor(Math.random() * 20) + 1);
+        y = (Math.floor(Math.random() * 20) + 1);
     }
     num1.innerHTML = x;
     num2.innerHTML = y;
